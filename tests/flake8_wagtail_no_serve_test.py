@@ -23,7 +23,7 @@ def test_has_serve_method():
     with open(os.path.join('tests', 'fixtures', 'invalid.py')) as fh:
         file_ = fh.read()
     assert _results(file_) == {
-        '4:1 WNS page model should not define a custom serve method',
+        '5:4 WNS page model should not define a custom serve method',
     }
 
 
