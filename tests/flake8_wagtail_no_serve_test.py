@@ -25,6 +25,7 @@ def test_trivial_case():
     ('filename', 'expected'),
     (
         ('valid_page_direct', set()),
+        ('valid_non_page', set()),
         (
             'invalid_page_direct', {
                 '5:4 WNS page model should not define a custom serve method',
