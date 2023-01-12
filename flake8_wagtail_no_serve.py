@@ -19,7 +19,7 @@ class Visitor(ast.NodeVisitor):
         self.problems: List[Tuple[int, int]] = []
 
     def visit_ClassDef(self, node: ast.ClassDef) -> None:
-        has_page_base = len([base.id for base in node.bases if re.match(BASES, base.id)]) > 0
+        has_page_base = len([base.id for base in node.bases if isinstance(base, ast.Name) and re.match(BASES, base.id)]) > 0
         if node.bases and has_page_base:
             for child in node.body:
                 if isinstance(child, ast.FunctionDef) and child.name == 'serve':
