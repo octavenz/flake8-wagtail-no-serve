@@ -29,12 +29,12 @@ def test_trivial_case():
         ('valid_non_page_func', set()),
         (
             'invalid_page_direct', {
-                '5:4 WNS page model should not define a custom serve method',
+                '5:4 WNS001 page model should not define a custom serve method',
             },
         ),
         (
             'invalid_page_indirect', {
-                '9:4 WNS page model should not define a custom serve method',
+                '9:4 WNS001 page model should not define a custom serve method',
             },
         ),
     ),

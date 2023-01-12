@@ -10,7 +10,7 @@ if sys.version_info < (3, 8):
 else:
     import importlib.metadata as importlib_metadata  # pragma: >=3.8 cover
 
-MESSAGE = 'WNS page model should not define a custom serve method'
+MESSAGE = 'WNS001 page model should not define a custom serve method'
 BASES = '[A-Za-z]*Page'
 
 
